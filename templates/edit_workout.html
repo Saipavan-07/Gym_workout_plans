@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Workout</title>
+</head>
+<body>
+    <h1>Edit Workout</h1>
+    <form method="post">
+        <label>Name:</label>
+        <input type="text" name="name" value="{{ workout[1] }}" required><br>
+        <label>Category:</label>
+        <input type="text" name="category" value="{{ workout[2] }}" required><br>
+        <label>Description:</label>
+        <textarea name="description">{{ workout[3] }}</textarea><br>
+        <button type="submit">Save Changes</button>
+    </form>
+    <a href="{{ url_for('index') }}">Back</a>
+</body>
+</html>
